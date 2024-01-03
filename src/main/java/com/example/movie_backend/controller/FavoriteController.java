@@ -1,16 +1,17 @@
-package com.example.movie_backend.favoris;
+package com.example.movie_backend.controller;
 
+import com.example.movie_backend.entity.Favorite;
+import com.example.movie_backend.repository.FavoriteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 @RestController
 @RequestMapping
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:80")
 public class FavoriteController {
 
 
@@ -42,5 +43,12 @@ public class FavoriteController {
         } catch (Exception e) {
             return ResponseEntity.status(500).body("Internal server error");
         }
+    }
+
+    @GetMapping("/favorites/get")
+    public ResponseEntity<List<Favorite>> getFavoriteMovies() {
+        List<Favorite> favoriteMovies = favoriteRepository.findAll();
+
+        return ResponseEntity.ok(favoriteMovies);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.movie_backend.comment;
+package com.example.movie_backend.entity;
 
 
 import jakarta.persistence.Entity;
@@ -11,14 +11,14 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String idmovie;
+    private Long idmovie;
 
     private String name;
     private String email;
     private String comment;
 
 
-    public Comment(Long id, String name, String email, String comment, String idmovie) {
+    public Comment(Long id, String name, String email, String comment, Long idmovie) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -62,11 +62,11 @@ public class Comment {
         this.comment = comment;
     }
 
-    public String getIdmovie() {
+    public Long getIdmovie() {
         return idmovie;
     }
 
-    public void setIdmovie(String idmovie) {
+    public void setIdmovie(Long idmovie) {
         this.idmovie = idmovie;
     }
 }

@@ -1,5 +1,7 @@
-package com.example.movie_backend.favoris;
+package com.example.movie_backend.service;
 
+import com.example.movie_backend.entity.Favorite;
+import com.example.movie_backend.repository.FavoriteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,19 +1,19 @@
-package com.example.movie_backend.comment;
+package com.example.movie_backend.dto;
 
 public class CommentDTO {
     private String name;
     private String email;
     private String comment;
 
-    public String getIdmovie() {
+    public Long getIdmovie() {
         return idmovie;
     }
 
-    public void setIdmovie(String idmovie) {
+    public void setIdmovie(Long idmovie) {
         this.idmovie = idmovie;
     }
 
-    private String idmovie;
+    private Long idmovie;
 
     public String getName() {
         return name;

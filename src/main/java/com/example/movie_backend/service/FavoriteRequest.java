@@ -1,4 +1,4 @@
-package com.example.movie_backend.favoris;
+package com.example.movie_backend.service;
 
 public class FavoriteRequest {
     private Long movieId;

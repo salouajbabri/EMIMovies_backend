@@ -1,4 +1,4 @@
-package com.example.movie_backend.comment;
+package com.example.movie_backend.config;
 
 
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ public class CommentConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:4200")
+                .allowedOrigins("http://localhost:80")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
         .allowCredentials(true);
     }
